@@ -10,3 +10,6 @@ To test:
 $curl --header "Accept: application/json" http://localhost:8080/o/service/api/user/123
 {"userId":123,"firstName":"John","lastName":"Doe"}
 ```
+
+Credits to: https://github.com/rfranchi/sample-rest-api
+Adapted to run with Liferay DXP 7.4
