@@ -1,5 +1,6 @@
 package com.liferay.samples.fbo.my.spring.rest;
 
+import com.liferay.samples.fbo.my.ext.service.FooService;
 import com.liferay.samples.fbo.my.spring.model.User;
 import com.liferay.samples.fbo.my.spring.service.UserService;
 
@@ -23,10 +24,16 @@ public class RestUserController {
 		user.setFirstName(userService.getFirstName(id));
 		user.setLastName(userService.getLastName(id));
 		user.setUserId(id);
+		
+		fooService.foo();
+		
 		return user;
 	}
 
 	@Autowired
 	private UserService userService;
-	
+
+	@Autowired
+	private FooService fooService;
+
 }

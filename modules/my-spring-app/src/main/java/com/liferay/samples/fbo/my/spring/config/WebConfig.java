@@ -11,7 +11,10 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.liferay.samples.fbo.my.spring")
+@ComponentScan(basePackages = {
+		"com.liferay.samples.fbo.my.spring",
+		"com.liferay.samples.fbo.my.ext"
+		})
 public class WebConfig implements WebMvcConfigurer {
 
     @Override
